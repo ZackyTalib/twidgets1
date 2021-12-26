@@ -1,0 +1,87 @@
+{
+  "name": "twidgets1",
+  "productName": "twidgets1",
+  "version": "1.5-beta",
+  "description": "An application that allows you to highlight livechats into your stream. (S1 Fork)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "ZackyTalib",
+    "email": "38492137+ZackyTalib@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "executableName": "TwidgetS1",
+        "name": "TwidgetS1",
+        "icon": "./build/icon.ico",
+        "asar": {
+          "unpack": "**/src/assets/templates/*"
+        },
+        "win32metadata": {
+          "CompanyName": "ZackyVT"
+        }
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "twidgets1",
+            "authors": "Zacky VT",
+            "iconUrl": "https://raw.githubusercontent.com/ZackyTalib/twidget/master/build/icon.ico",
+            "loadingGif": "./build/twidgetInstallerGIF.gif",
+            "setupIcon": "./build/installationIcon.ico"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ejs": "^3.1.6",
+    "electron-is-dev": "^2.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.0.0",
+    "electron-util": "^0.16.0",
+    "express": "^4.17.1",
+    "firebase": "^8.6.1",
+    "googleapis": "^73.0.0",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.4.0",
+    "tmi.js": "^1.8.3",
+    "tree-kill": "^1.2.2",
+    "update-electron-app": "^2.0.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-appx": "^6.0.0-beta.59",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "@electron-forge/publisher-github": "^6.0.0-beta.55",
+    "electron": "12.0.7"
+  }
+}

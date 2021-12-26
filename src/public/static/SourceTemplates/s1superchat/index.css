@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.bg-red-900 {
+    background-color: #711B10 !important;
+}
+
+.animation {
+    animation: popout 1s ease;
+}
+
+@keyframes popout {
+
+    from{transform:scale(0)}
+    
+    40%{transform:scale(1)}
+    
+    80%{transform: scale(0.8)}
+    
+    to{transform:scale(1)}
+    
+}
