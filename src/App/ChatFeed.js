@@ -128,7 +128,7 @@ export default class ChatFeed {
                 type: "MessageChat",
                 name: data.name,
                 message: data.msg,
-                pfp: data.logo == "null" ? "https://www.pngkey.com/png/detail/218-2185262_jpg-different-kinds-of-soccer-ball-clip-art.png" : data.logo,
+                pfp: data.logo == "null" ? "https://cdn.s1live.com/clubs/custom-logos/GEN.png" : data.logo,
                 userStatus: "normal",
                 platform: "s1live"
             })
