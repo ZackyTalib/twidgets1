@@ -42,37 +42,22 @@ export default class SourceManager {
             document.getElementById("pfp").src = data.pfp;
             document.getElementById("message").innerHTML = data.message;
 
-            document.getElementsByClassName("root")[0].children[0].classList.add("youtubePlatform");
-            document.getElementsByClassName("root")[0].children[0].classList.remove("facebookPlatform");
-            document.getElementsByClassName("root")[0].children[0].classList.remove("twitchPlatform");
-            document.getElementsByClassName("root")[0].children[0].classList.remove("s1Platform");
-
             if(data.platform == "youtube"){
-                document.getElementsByClassName("root")[0].children[0].classList.add("youtubePlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("facebookPlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("twitchPlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("s1Platform");
+                document.getElementById("icon").src = "/static/images/yt-logo.png";
+                document.getElementById("icon").style.marginTop = "0.7rem";
+                document.getElementById("icon").style.marginLeft = "-0.45rem";
             } 
             
             if(data.platform == "facebook") {
-                document.getElementsByClassName("root")[0].children[0].classList.remove("youtubePlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.add("facebookPlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("twitchPlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("s1Platform");
-            }
-
-            if(data.platform == "twitch"){
-                document.getElementsByClassName("root")[0].children[0].classList.add("twitchPlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("facebookPlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("youtubePlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("s1Platform");
+                document.getElementById("icon").src = "https://image.flaticon.com/icons/png/128/145/145802.png";
+                document.getElementById("icon").style.width = "2.1rem";
+                document.getElementById("icon").style.height = "2.1rem";
+                document.getElementById("icon").style.marginTop = "0.71rem";
+                document.getElementById("icon").style.marginLeft = "-0.05rem";
             }
 
             if(data.platform == "s1live"){
-                document.getElementsByClassName("root")[0].children[0].classList.add("s1Platform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("twitchPlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("facebookPlatform");
-                document.getElementsByClassName("root")[0].children[0].classList.remove("youtubePlatform");
+                document.getElementById("icon").src = "/static/images/s1icon.png";
             }
         }
 
